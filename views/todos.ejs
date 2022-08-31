@@ -19,18 +19,20 @@
         <div class="todos-wrapper">
             <% categories.forEach( cat => { %>
                 <div class="category-container">
-                    <h1><%= cat %></h1>
+                    <h1 class="category-name"><%= cat %></h1>
                     <% priorities.forEach( prior => { %>
                         <ul class="priority-container" id='<%=prior%>'>
                             <h4><%= prior %></h4>
                             <% todos.forEach(todo => { %>
-                                <% if (todo.priority === prior) { %>
-                                    <li class='todoItem' data-id='<%=todo._id%>'>
-                                        <span class='<%= todo.completed === true ? 'completed' : 'not'%>'><%= todo.todo %></span>
-                                        <span class="todoDeadline"><%= todo.deadline %> | </span>
-                                        <span class='del'> <i class="fa-solid fa-trash-can"></i> </span>
+                                <div class="align-todos">
+                                    <% if (todo.priority === prior) { %>
+                                        <li class='todoItem' data-id='<%=todo._id%>'>
+                                            <span class='<%= todo.completed === true ? 'completed' : 'not'%>'><%= todo.todo %></span>
+                                            <span class="todoDeadline"><%= todo.deadline %> | </span>
+                                            <span class='del'> <i class="fa-solid fa-trash-can"></i> </span>
                                         </li>
-                                <% } %>
+                                    <% } %>
+                                </div>
                             <% }) %>
                         </ul>
                     <% }) %>

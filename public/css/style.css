@@ -5,6 +5,9 @@
 h1{
     color:hsl(90, 12%, 58%); 
 }
+.category-name {
+    color: hsl(182, 83%, 9%);
+}
 
 .logout-button {
     background-color: hsl(90, 12%, 58%);
