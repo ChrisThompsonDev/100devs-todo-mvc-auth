@@ -9,6 +9,11 @@ const TodoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  priority: {
+    type: String,
+    required: true,
+    enum: ['low', 'medium', 'high']
+  },
   deadline: {
     type: String,
     required: true,

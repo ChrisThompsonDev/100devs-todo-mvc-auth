@@ -12,37 +12,50 @@
 </head>
 <body>
     <div class="main-wrapper">
-        <h1>Todos</h1>
-        <div class="todos-container">
+        <div class="nav">
+            <h1><%=user.userName%>'s To Do List</h1>
+            <a href="/logout"><div class="logout-button">Logout</div></a>
+        </div>
+        <div class="todos-wrapper">
             <% categories.forEach( cat => { %>
                 <div class="category-container">
-                    <h2><%= cat %></h2>
-                    <% todos.forEach( todo => { %>
-                            <ul>
-                                <% if (todo.category === cat) { %>
+                    <h1><%= cat %></h1>
+                    <% priorities.forEach( prior => { %>
+                        <ul class="priority-container" id='<%=prior%>'>
+                            <h4><%= prior %></h4>
+                            <% todos.forEach(todo => { %>
+                                <% if (todo.priority === prior) { %>
                                     <li class='todoItem' data-id='<%=todo._id%>'>
                                         <span class='<%= todo.completed === true ? 'completed' : 'not'%>'><%= todo.todo %></span>
                                         <span class="todoDeadline"><%= todo.deadline %> | </span>
                                         <span class='del'> <i class="fa-solid fa-trash-can"></i> </span>
-                                    </li>
+                                        </li>
                                 <% } %>
-                            </ul>
+                            <% }) %>
+                        </ul>
                     <% }) %>
-                </div> 
-            <% }) %>   
+                </div>
+            <% }) %>
         </div>
 
+        <div class="form-wrapper">
+            <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
-        <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+            <form action="/todos/createTodo" method='POST' class="post-form">
+                <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+                <input type="text" placeholder="Enter Item's Category" name="todoCategory">
+                <input type="date" placeholder="Enter Item's Due Date" name="todoDeadline">
+                <select name="priority" id="prior">
+                    <option value="low">priority: Low</option>
+                    <option value="medium">priority: Medium</option>
+                    <option value="high">priority: High</option>
+                </select>
+                <input type="submit">
+            </form>
 
-        <form action="/todos/createTodo" method='POST' class="post-form">
-            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-            <input type="text" placeholder="Enter Item's Category" name="todoCategory">
-            <input type="date" placeholder="Enter Item's Due Date" name="todoDeadline">
-            <input type="submit">
-        </form>
+            
+        </div>
 
-        <a href="/logout">Logout</a>
     </div>
 
     <script src="js/main.js"></script>
