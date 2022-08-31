@@ -5,6 +5,14 @@ const TodoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  category: {
+    type: String,
+    required: true,
+  },
+  deadline: {
+    type: String,
+    required: true,
+  },
   completed: {
     type: Boolean,
     required: true,
