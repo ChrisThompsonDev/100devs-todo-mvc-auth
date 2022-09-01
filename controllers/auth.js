@@ -10,6 +10,19 @@ const User = require('../models/User')
       title: 'Login'
     })
   }
+
+  // these will handle the google requests
+  exports.getGoogle = (req, res, next) => {
+    passport.authenticate('google', { scope: ['profile'] })
+  }
+
+  exports.getGoogleCallback = (req, res, next) => {
+    passport.authenticate('google', {failureRedirect: '/'}), 
+    (req, res) => {
+        res.redirect('/todos')
+    }
+  }
+  // google ends here
   
   exports.postLogin = (req, res, next) => {
     const validationErrors = []

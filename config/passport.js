@@ -1,6 +1,8 @@
 const LocalStrategy = require('passport-local').Strategy
+const GoogleStrategy = require('passport-google-oauth20').Strategy  //google oauth inserted
 const mongoose = require('mongoose')
 const User = require('../models/User')
+const Guser = require('../models/Guser') //google users schema imported
 
 module.exports = function (passport) {
   passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
@@ -22,6 +24,40 @@ module.exports = function (passport) {
     })
   }))
   
+  // the google oauth strategy #start
+  passport.use(
+    new GoogleStrategy(
+        {
+            clientID: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET, 
+            callbackURL: '/google/google/callback',
+        },
+        async (accessToken, refreshToken, profile, done) => { 
+            const newGuser = {
+                googleId: profile.id,
+                userName: profile.displayName,
+                firstName: profile.name.givenName,
+                lastName: profile.name.familyName,
+                image: profile.photos[0].value
+            }
+
+            try {
+                let user = await Guser.findOne({ googleId: profile.id })
+
+                if (user){
+                    done(null, user)
+                }else{
+                    user = await Guser.create(newGuser)
+                    done(null, user)
+                }
+            } catch (err) {
+                console.error(err)
+            }
+
+        }
+    )
+)
+        // #google auth end
 
   passport.serializeUser((user, done) => {
     done(null, user.id)
