@@ -12,7 +12,7 @@ const User = require('../models/User')
   }
 
   // these will handle the google requests
-  exports.getGoogle = (req, res, next) => {
+  /* exports.getGoogle = (req, res, next) => {
     passport.authenticate('google', { scope: ['profile'] })
   }
 
@@ -21,7 +21,7 @@ const User = require('../models/User')
     (req, res) => {
         res.redirect('/todos')
     }
-  }
+  } */
   // google ends here
   
   exports.postLogin = (req, res, next) => {
