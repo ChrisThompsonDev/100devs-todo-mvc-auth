@@ -64,10 +64,10 @@ h1{
     margin: 3%;
     border-radius: 10px;
 }
-.days1{
+.tomorrow{
     background-color: yellow;
 }
-.days0 {
+.overdue {
     background-color: red;
 }
 .completed{

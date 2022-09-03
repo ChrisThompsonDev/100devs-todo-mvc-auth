@@ -26,7 +26,13 @@
                             <% todos.forEach(todo => { %>
                                 <div class="align-todos">
                                     <% if (todo.priority === prior) { %>
-                                        <li class='todoItem days<%= Math.abs((new Date(new Date().toJSON().slice(0, 10)))-(new Date(todo.deadline))) / (1000 * 3600 * 24) %>' data-id='<%=todo._id%>'>
+                                        <li class='todoItem <% if(((new Date(new Date().toJSON().slice(0, 10)))-(new Date(todo.deadline))) / (1000 * 3600 * 24) >= 0) { %>
+                                            overdue
+                                        <% } else if (((new Date(new Date().toJSON().slice(0, 10)))-(new Date(todo.deadline))) / (1000 * 3600 * 24) == -1) { %>
+                                            tomorrow
+                                        <% } else { %>
+                                            time
+                                        <% } %>' data-id='<%=todo._id%>'>
                                             <span class='<%= todo.completed === true ? 'completed' : 'not'%>'><%= todo.todo %></span>
                                             <span class="todoDeadline"><%= todo.deadline %> | </span>
                                             <span></span>
