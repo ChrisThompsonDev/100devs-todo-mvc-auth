@@ -98,27 +98,23 @@ Index page
 ********************/
 
 
-.loginTodo { 
+.todoMain { 
     background: lightgray;
 }
 
-.sticky {
-    text-align: center;
-}
-
-.signupLogin {
+.todoDivOne {
     margin: 2%;
     padding: 2%;
     height: 80%;
     text-align: center;    
 }
-.signupLogin h1 {
+.todoDivOne h1 {
     font-family: 'Merriweather', serif;   
     font-weight: 700; 
     font-size: 50px;
     color: hsl(345, 81%, 36%)
 }
-.signupLogin h2 {
+.todoDivOne h2 {
     font-family: 'Merriweather', serif;
     font-style: italic;
     color: hsl(143, 89%, 19%);
@@ -140,4 +136,38 @@ Index page
 a {
     color: black;
     text-decoration: none;
+}
+
+/*********************
+Login & signup pages
+*********************/
+
+.loginMain, .signUpMain{
+    background: lightgray;
+}
+
+.logInDivOne, .signUpDivOne {
+    margin: auto;
+    width: 360px;
+}
+
+input[type=email], input[type=password], input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
