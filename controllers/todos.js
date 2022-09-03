@@ -7,7 +7,6 @@ module.exports = {
             //capture all current categories for the front end
             const categories = []
             const priorities = ['high', 'medium', 'low']
-
             const todoItems = await Todo.find({userId:req.user.id})
             const itemsLeft = await Todo.countDocuments({userId:req.user.id,completed: false})
 
