@@ -92,3 +92,52 @@ h1{
     padding: 2%;
     margin-bottom: 2%;
 }
+
+/********************
+Index page
+********************/
+
+
+.loginTodo { 
+    background: lightgray;
+}
+
+.sticky {
+    text-align: center;
+}
+
+.signupLogin {
+    margin: 2%;
+    padding: 2%;
+    height: 80%;
+    text-align: center;    
+}
+.signupLogin h1 {
+    font-family: 'Merriweather', serif;   
+    font-weight: 700; 
+    font-size: 50px;
+    color: hsl(345, 81%, 36%)
+}
+.signupLogin h2 {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    color: hsl(143, 89%, 19%);
+    font-size: 40px;
+}
+.loginButtons {
+    display: inline-block;  
+}
+
+.login-button {
+    background-color: hsl(90, 12%, 58%);
+    padding: 12%;
+    border-radius: 6px;
+    width: 100px;
+    text-align: center;
+    margin: 2%;    
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
