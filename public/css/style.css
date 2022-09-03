@@ -37,12 +37,14 @@ h1{
     flex-direction: column;
     align-items: center;
     background-color: hsl(325, 15%, 51%);
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .todos-wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    
 }
 
 .category-container {
