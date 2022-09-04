@@ -44,7 +44,7 @@
                             <h4><%= prior %></h4>
                             <% todos.forEach(todo => { %>
                                 <div class="align-todos">
-                                    <% if (todo.priority === prior) { %>
+                                    <% if (todo.priority === prior && todo.category === cat) { %>
                                         <li class='todoItem 
                                         <% if(Math.ceil((new Date(new Date().toJSON().slice(0, 10))) > (new Date(todo.deadline)))) { %>
                                             overdue
