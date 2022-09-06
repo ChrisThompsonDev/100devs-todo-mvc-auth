@@ -5,12 +5,22 @@
 h1{
     color:hsl(90, 12%, 58%); 
 }
+
+.user-welcome {
+    color:rgb(6, 138, 114);
+}
+
 .category-name {
-    color: hsl(182, 83%, 9%);
+    /* color: hsl(182, 83%, 9%); */
+    color:rgb(9, 112, 94);
+    align-self: center;
+    text-decoration: underline;
 }
 
 .logout-button {
-    background-color: hsl(90, 12%, 58%);
+    background-color: hsla(263, 60%, 56%, 0.364);
+    border: 2px solid rgb(234, 83, 234);
+    color: white;
     padding: 12%;
     border-radius: 6px;
     width: 100px;
@@ -19,7 +29,7 @@ h1{
 
 .nav>a {
     text-decoration: none;
-    color: hsl(182, 83%, 9%);
+    /* color: hsl(182, 83%, 9%); */
     font-size: 20px;
 }
 .nav {
@@ -28,10 +38,11 @@ h1{
     justify-content: space-around;
     background-color: hsla(182, 83%, 9%, 0.708);
     border: 2px solid rgb(22, 93, 22);
-    color: hsl(90, 12%, 58%);
+    /* color: black; */
     width: 100vw;
     position: sticky;
     top: 0;
+    height: 65px;
 }
 
 .main-wrapper {
@@ -44,29 +55,54 @@ h1{
     /* height: 100vh; */
 }
 
-.todos-wrapper {
+/* change */
+/* .todos-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     
-}
+} */
+/* end change */
 
 .category-container {
     margin: 0 10%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    /* align-items: center; */
 }
 
+/* .priority-container {
+    display: flex;
+} */
+/* change start */
 .priority-container {
     display: flex;
+    flex-direction: column;
 }
+
+.priority-container > h4 {
+    align-self: center;
+}
+
+.align-todos {
+    display: flex;
+    flex-direction: row;
+}
+
+/* wrapper to make todo items within each priority horizontal */
+.horizontal-lis {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* change end */
 
 
 .todoItem {
     background-color: rgba(0, 128, 0, 0.431);
     border: 2px solid rgb(22, 231, 22);
-    padding: 4%;
+    box-shadow: 12px 12px 2px 1px rgba(7, 61, 22, 0.286);
+    padding: 7%;
     list-style: none;
     margin: 3%;
     border-radius: 10px;
