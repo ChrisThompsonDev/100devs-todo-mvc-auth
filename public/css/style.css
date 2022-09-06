@@ -26,17 +26,21 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: hsl(182, 83%, 9%);
+    background-color: hsla(182, 83%, 9%, 0.708);
+    border: 2px solid rgb(22, 93, 22);
     color: hsl(90, 12%, 58%);
     width: 100vw;
     position: sticky;
+    top: 0;
 }
 
 .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(325, 15%, 51%);
+    /* background-color: hsl(325, 15%, 51%); */
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(146,63,244,1) 50%, rgba(0,0,0,0.13627449270723913) 100%); */
+    background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 52%, rgba(0,0,0,0.13627449270723913) 88%);
     /* height: 100vh; */
 }
 
@@ -60,17 +64,20 @@ h1{
 
 
 .todoItem {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.431);
+    border: 2px solid rgb(22, 231, 22);
     padding: 4%;
     list-style: none;
     margin: 3%;
     border-radius: 10px;
 }
 .tomorrow{
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.399);
+    border: 2px solid yellow;
 }
 .overdue {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.456);
+    border: 2px solid red;
 }
 .completed{
     text-decoration: line-through;
@@ -93,10 +100,12 @@ h1{
     margin-bottom: 2%;
 }
 
+
+
 /* INPUT FORM AND  TODOS WRAPPER*/
 .form-todos-wrapper{
     width: 100%;
-    height:100vh;
+    /* height:100vh; */
     display: flex;
     gap: 200px;
     justify-content: flex-start; 
@@ -189,4 +198,9 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.todos-input {
+    background-color: rgba(0, 0, 0, 0.331) !important;
+    border: 2px solid black !important;
 }
