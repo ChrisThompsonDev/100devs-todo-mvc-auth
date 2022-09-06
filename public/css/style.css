@@ -5,12 +5,21 @@
 h1{
     color:hsl(90, 12%, 58%); 
 }
+
+.user-welcome {
+    color:rgb(6, 138, 114);
+}
+
 .category-name {
-    color: hsl(182, 83%, 9%);
+    color:rgb(15, 174, 148);
+    align-self: center;
+    text-decoration: underline;
 }
 
 .logout-button {
-    background-color: hsl(90, 12%, 58%);
+    background-color: hsla(263, 60%, 56%, 0.364);
+    border: 2px solid rgb(234, 83, 234);
+    color: white;
     padding: 12%;
     border-radius: 6px;
     width: 100px;
@@ -19,58 +28,80 @@ h1{
 
 .nav>a {
     text-decoration: none;
-    color: hsl(182, 83%, 9%);
     font-size: 20px;
 }
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: hsl(182, 83%, 9%);
-    color: hsl(90, 12%, 58%);
+    background-color: hsla(182, 83%, 9%, 0.708);
+    border: 2px solid rgb(22, 93, 22);
     width: 100vw;
     position: sticky;
+    top: 0;
+    height: 65px;
 }
 
 .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(325, 15%, 51%);
-    /* height: 100vh; */
+    /* background-color: hsl(325, 15%, 51%); */
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(146,63,244,1) 50%, rgba(0,0,0,0.13627449270723913) 100%); */
+    /* background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 52%, rgba(0,0,0,0.13627449270723913) 88%); */
+    /* background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%); */
+    background: linear-gradient(90deg, rgba(81,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%);
+   
 }
 
-.todos-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-}
+
 
 .category-container {
     margin: 0 10%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+  
 }
+
 
 .priority-container {
     display: flex;
+    flex-direction: column;
+}
+
+.priority-container > h4 {
+    align-self: center;
+}
+
+.align-todos {
+    display: flex;
+    flex-direction: row;
 }
 
 
+.horizontal-lis {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
 .todoItem {
-    background-color: green;
-    padding: 4%;
+    background-color: rgba(0, 128, 0, 0.431);
+    border: 2px solid rgb(22, 231, 22);
+    box-shadow: 12px 12px 2px 1px rgba(7, 61, 22, 0.286);
+    padding: 7%;
     list-style: none;
     margin: 3%;
     border-radius: 10px;
 }
 .tomorrow{
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.399);
+    border: 2px solid yellow;
 }
 .overdue {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.456);
+    border: 2px solid red;
 }
 .completed{
     text-decoration: line-through;
@@ -93,10 +124,12 @@ h1{
     margin-bottom: 2%;
 }
 
+
+
 /* INPUT FORM AND  TODOS WRAPPER*/
 .form-todos-wrapper{
     width: 100%;
-    height:100vh;
+    /* height:100vh; */
     display: flex;
     gap: 200px;
     justify-content: flex-start; 
@@ -110,6 +143,8 @@ h1{
         flex-direction: column;
         gap:0px;
     }
+
+
 }
 
 /********************
@@ -189,4 +224,9 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.todos-input {
+    background-color: rgba(0, 0, 0, 0.331) !important;
+    border: 2px solid black !important;
 }

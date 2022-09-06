@@ -14,7 +14,7 @@
 <body>
     <div class="main-wrapper">
         <div class="nav">
-            <h1><%=user.userName%>'s To Do List</h1>
+            <h1 class="user-welcome"><%=user.userName%>'s To Do List</h1>
             <a href="/logout"><div class="logout-button">Logout</div></a>
         </div>
         <div class="form-todos-wrapper">
@@ -30,7 +30,7 @@
                         <option value="medium">priority: Medium</option>
                         <option value="high">priority: High</option>
                     </select>
-                    <input type="submit">
+                    <input type="submit" value="Create to-do" class="todos-input">
                 </form>
     
                 
@@ -42,24 +42,26 @@
                     <% priorities.forEach( prior => { %>
                         <ul class="priority-container" id='<%=prior%>'>
                             <h4><%= prior %></h4>
-                            <% todos.forEach(todo => { %>
-                                <div class="align-todos">
-                                    <% if (todo.priority === prior) { %>
-                                        <li class='todoItem 
-                                        <% if(Math.ceil((new Date(new Date().toJSON().slice(0, 10))) > (new Date(todo.deadline)))) { %>
-                                            overdue
-                                        <% } else if (((new Date(new Date().toJSON().slice(0, 10)))-(new Date(todo.deadline))) / (1000 * 3600 * 24) == 0) { %>
-                                            tomorrow
-                                        <% } else { %>
-                                            time
-                                        <% } %>' data-id='<%=todo._id%>'>
-                                            <span class='<%= todo.completed === true ? 'completed' : 'not'%>'><%= todo.todo %></span>
-                                            <span class="todoDeadline"><%= todo.deadline %> | </span>
-                                            <span class='del'> <i class="fa-solid fa-trash-can"></i> </span>
-                                        </li>
-                                    <% } %>
-                                </div>
+                            <div class="horizontal-lis">
+                                <% todos.forEach(todo => { %>
+                                    <div class="align-todos">
+                                        <% if (todo.priority === prior) { %>
+                                            <li class='todoItem 
+                                            <% if(Math.ceil((new Date(new Date().toJSON().slice(0, 10))) > (new Date(todo.deadline)))) { %>
+                                                overdue
+                                            <% } else if (((new Date(new Date().toJSON().slice(0, 10)))-(new Date(todo.deadline))) / (1000 * 3600 * 24) == 0) { %>
+                                                tomorrow
+                                            <% } else { %>
+                                                time
+                                            <% } %>' data-id='<%=todo._id%>'>
+                                                <span class='<%= todo.completed === true ? 'completed' : 'not'%>'><%= todo.todo %></span>
+                                                <span class="todoDeadline"><%= todo.deadline %> | </span>
+                                                <span class='del'> <i class="fa-solid fa-trash-can"></i> </span>
+                                            </li>
+                                        <% } %>
+                                    </div>
                             <% }) %>
+                            </div>
                         </ul>
                     <% }) %>
                 </div>
