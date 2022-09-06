@@ -183,11 +183,13 @@ Index page
 }
 
 .login-button {
-    background-color: hsl(90, 12%, 58%);
+    background-color: rgba(0, 128, 0, 0.431);
+    border: 2px solid rgb(22, 231, 22);
+    box-shadow: 12px 12px 2px 1px rgba(7, 61, 22, 0.286);
     padding: 12%;
     border-radius: 6px;
     width: 100px;
-    text-align: center;
+    text-align: center;   
     margin: 2%;    
 }
 
@@ -221,13 +223,14 @@ input[type=email], input[type=password], input[type=text] {
   
 input[type=submit] {
     width: 100%;
-    background-color: #04AA6D;
-    color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    background-color: rgba(0, 128, 0, 0.431);
+    border: 2px solid rgb(22, 231, 22);
+    box-shadow: 12px 12px 2px 1px rgba(7, 61, 22, 0.286);
 }
 
 .todos-input {
