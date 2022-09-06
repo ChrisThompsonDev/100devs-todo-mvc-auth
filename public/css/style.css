@@ -1,3 +1,7 @@
+html {
+    background: linear-gradient(90deg, rgba(81,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -50,7 +54,7 @@ h1{
     /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(146,63,244,1) 50%, rgba(0,0,0,0.13627449270723913) 100%); */
     /* background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 52%, rgba(0,0,0,0.13627449270723913) 88%); */
     /* background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%); */
-    background: linear-gradient(90deg, rgba(81,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%);
+    /* background: linear-gradient(90deg, rgba(81,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%); */
    
 }
 
@@ -153,7 +157,7 @@ Index page
 
 
 .todoMain { 
-    background: lightgray;
+    /* background: linear-gradient(90deg, rgba(81,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%); */
 }
 
 .todoDivOne {
@@ -166,12 +170,12 @@ Index page
     font-family: 'Merriweather', serif;   
     font-weight: 700; 
     font-size: 50px;
-    color: hsl(345, 81%, 36%)
+    color: hsl(345, 47%, 63%)
 }
 .todoDivOne h2 {
     font-family: 'Merriweather', serif;
     font-style: italic;
-    color: hsl(143, 89%, 19%);
+    color: hsl(134, 71%, 66%);
     font-size: 40px;
 }
 .loginButtons {
@@ -197,7 +201,7 @@ Login & signup pages
 *********************/
 
 .loginMain, .signUpMain{
-    background: lightgray;
+    /* background: linear-gradient(90deg, rgba(81,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%); */
 }
 
 .logInDivOne, .signUpDivOne {
@@ -229,4 +233,19 @@ input[type=submit] {
 .todos-input {
     background-color: rgba(0, 0, 0, 0.331) !important;
     border: 2px solid black !important;
+}
+
+/*********************
+Footer
+*********************/
+footer {
+    padding: 40px 30px 30px 0;
+    text-align: center;
+    color: rgb(198, 196, 196);
+    text-shadow: 1px 1px #000000;
+}
+footer a {
+    color: rgb(255, 254, 254);
+    text-decoration: underline;
+    font-weight: bold;
 }
