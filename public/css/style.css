@@ -11,7 +11,6 @@ h1{
 }
 
 .category-name {
-    /* color: hsl(182, 83%, 9%); */
     color:rgb(15, 174, 148);
     align-self: center;
     text-decoration: underline;
@@ -29,7 +28,6 @@ h1{
 
 .nav>a {
     text-decoration: none;
-    /* color: hsl(182, 83%, 9%); */
     font-size: 20px;
 }
 .nav {
@@ -38,7 +36,6 @@ h1{
     justify-content: space-around;
     background-color: hsla(182, 83%, 9%, 0.708);
     border: 2px solid rgb(22, 93, 22);
-    /* color: black; */
     width: 100vw;
     position: sticky;
     top: 0;
@@ -54,30 +51,19 @@ h1{
     /* background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 52%, rgba(0,0,0,0.13627449270723913) 88%); */
     /* background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%); */
     background: linear-gradient(90deg, rgba(81,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%);
-    /* height: 100vh; */
+   
 }
 
-/* change */
-/* .todos-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-} */
-/* end change */
+
 
 .category-container {
     margin: 0 10%;
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
-    /* align-items: center; */
+  
 }
 
-/* .priority-container {
-    display: flex;
-} */
-/* change start */
+
 .priority-container {
     display: flex;
     flex-direction: column;
@@ -92,12 +78,12 @@ h1{
     flex-direction: row;
 }
 
-/* wrapper to make todo items within each priority horizontal */
+
 .horizontal-lis {
     display: flex;
     flex-wrap: wrap;
 }
-/* change end */
+
 
 
 .todoItem {
