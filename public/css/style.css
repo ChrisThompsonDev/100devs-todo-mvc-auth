@@ -12,7 +12,7 @@ h1{
 
 .category-name {
     /* color: hsl(182, 83%, 9%); */
-    color:rgb(9, 112, 94);
+    color:rgb(15, 174, 148);
     align-self: center;
     text-decoration: underline;
 }
@@ -51,7 +51,9 @@ h1{
     align-items: center;
     /* background-color: hsl(325, 15%, 51%); */
     /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(146,63,244,1) 50%, rgba(0,0,0,0.13627449270723913) 100%); */
-    background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 52%, rgba(0,0,0,0.13627449270723913) 88%);
+    /* background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 52%, rgba(0,0,0,0.13627449270723913) 88%); */
+    /* background: linear-gradient(90deg, rgba(159,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%); */
+    background: linear-gradient(90deg, rgba(81,46,191,1) 0%, rgba(146,63,244,1) 100%, rgba(0,0,0,0.13627449270723913) 100%);
     /* height: 100vh; */
 }
 
@@ -155,6 +157,8 @@ h1{
         flex-direction: column;
         gap:0px;
     }
+
+
 }
 
 /********************
