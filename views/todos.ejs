@@ -48,9 +48,9 @@
                                     <div class="align-todos">
                                         <% if (todo.priority === prior && todo.category === cat) { %>
                                             <li class='todoItem 
-                                            <% if(Math.ceil((new Date(new Date().toJSON().slice(0, 10))) > (new Date(todo.deadline)))) { %>
+                                            <% if((new Date(new Date().toJSON())) > (new Date(todo.deadline))) { %>
                                                 overdue
-                                            <% } else if (((new Date(new Date().toJSON().slice(0, 10)))-(new Date(todo.deadline))) / (1000 * 3600 * 24) == 0) { %>
+                                            <% } else if (((new Date(new Date().toJSON().slice(0, 10)))-(new Date(todo.deadline))) / (1000 * 3600 * 24) == -1) { %>
                                                 tomorrow
                                             <% } else { %>
                                                 time
