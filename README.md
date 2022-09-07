@@ -41,6 +41,8 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
   - DB_STRING= 'your database URI' 
  ---
  
+  - Dont forget to create a gitignore and add your node_modules and .env file to it.
+
  Have fun testing and improving it! 😎
 
 
