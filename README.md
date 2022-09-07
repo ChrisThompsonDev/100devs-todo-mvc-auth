@@ -1,6 +1,6 @@
 # Introduction
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app. Todo items are sorted by category and priority. When the todo item's due date is more than a day away it will be green, yellow when it is due tomorrow, and red when it is due/past due.
 
 [Link to project](https://todo-mvc-auth-local-1-4-1.herokuapp.com/) 
 
